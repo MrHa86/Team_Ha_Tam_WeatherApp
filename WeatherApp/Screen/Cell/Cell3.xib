@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Cell3" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="602"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="602"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-xp-cQB">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="602"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OBd-js-lhZ">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="602"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OBd-js-lhZ" firstAttribute="top" secondItem="6b8-xp-cQB" secondAttribute="top" id="2yT-Ks-an6"/>
+                            <constraint firstAttribute="trailing" secondItem="OBd-js-lhZ" secondAttribute="trailing" id="Zcl-rm-gVY"/>
+                            <constraint firstItem="OBd-js-lhZ" firstAttribute="leading" secondItem="6b8-xp-cQB" secondAttribute="leading" id="hMM-TV-upZ"/>
+                            <constraint firstAttribute="bottom" secondItem="OBd-js-lhZ" secondAttribute="bottom" id="hct-hr-vPd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="6b8-xp-cQB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LZq-6l-Nqd"/>
+                <constraint firstAttribute="trailing" secondItem="6b8-xp-cQB" secondAttribute="trailing" id="TgW-4t-Lm4"/>
+                <constraint firstAttribute="bottom" secondItem="6b8-xp-cQB" secondAttribute="bottom" id="Ybr-ol-QlB"/>
+                <constraint firstItem="6b8-xp-cQB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eDu-3V-2GA"/>
+            </constraints>
+            <size key="customSize" width="335" height="602"/>
+            <connections>
+                <outlet property="tableView" destination="OBd-js-lhZ" id="Qmc-1n-eoD"/>
+            </connections>
+            <point key="canvasLocation" x="233" y="2"/>
+        </collectionViewCell>
+    </objects>
+</document>

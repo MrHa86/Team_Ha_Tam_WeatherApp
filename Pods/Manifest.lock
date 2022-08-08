@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Kingfisher (6.3.1)
+  - MarqueeLabel (4.3.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - SwiftyJSON (5.0.1)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.1)
+  - Kingfisher
+  - MarqueeLabel
+  - NVActivityIndicatorView
+  - SwiftyJSON
+  - Toast-Swift (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - MarqueeLabel
+    - NVActivityIndicatorView
+    - SwiftyJSON
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  MarqueeLabel: 02f5ac8fd6877c94564556cb93fa86c70c08baeb
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: f99126c4d15945179c095095eb3b122f388f62b7
+
+COCOAPODS: 1.11.3
