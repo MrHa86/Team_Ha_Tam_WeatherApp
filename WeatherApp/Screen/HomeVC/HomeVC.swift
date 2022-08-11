@@ -17,17 +17,30 @@ class HomeVC: BaseViewController {
     
     // Param dùng để GET Data từ API
     var paramCurrent: Parameters = ["key": "745e4fb30356479f90eb88f6c5020641",
-                                    "city": "Ho Chi Minh"]
+                                    "city": ""]
     var paramHourly: Parameters = ["key": "745e4fb30356479f90eb88f6c5020641",
-                                   "city": "Ho Chi Minh",
+                                   "city": "",
                                    "hours": 24]
     var paramWeekly: Parameters = ["key": "745e4fb30356479f90eb88f6c5020641",
-                                   "city": "Ho Chi Minh",
+                                   "city": "",
                                    "days": 10]
+    // Biến để hứng City do người dùng chọn bên AddCityVC, hứng xong lưu vào UserDefault
+    var localParamCity: String = "" {
+        didSet {
+            print(" UserDefault city là : \(localParamCity)")
+            UserDefaults.standard.setValue(localParamCity, forKey: KEY_SAVE_CITY)
+            
+        }
+    }
+    var KEY_SAVE_CITY = "city"
+    
+    
     // Data source cho collectionView, tableView
     var currentData: [Data] = [] {
         didSet {
-            collectionView.reloadData()
+            if currentData.count > 0 {
+                collectionView.reloadData()
+            }
         }
     }
     var arrHourly: [DataHourly] = []
@@ -38,7 +51,20 @@ class HomeVC: BaseViewController {
         
         getWeatherData()
         configCollectionView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didSelectCity(_:)), name: NSNotification.Name("did.select.city"), object: nil)
+        let color1 = hexStringToUIColor("#ce5b06")
+        view.backgroundColor = color1
+        
+    }
     
+    // Xử lý khi nhận Notification
+    @objc func didSelectCity(_ notification: Notification) {
+        print(notification.userInfo!["userInfo"] as Any)
+        let city = notification.userInfo!["userInfo"]
+        self.localParamCity = stringFromAny(city)
+        
+        self.getWeatherData()
     }
     
     func configCollectionView() {
@@ -47,10 +73,17 @@ class HomeVC: BaseViewController {
         collectionView.register(UINib(nibName: "Cell1", bundle: nil), forCellWithReuseIdentifier: "cell1")
         collectionView.register(UINib(nibName: "Cell2", bundle: nil), forCellWithReuseIdentifier: "cell2")
         collectionView.register(UINib(nibName: "Cell3", bundle: nil), forCellWithReuseIdentifier: "cell3")
+        collectionView.register(UINib(nibName: "Cell4", bundle: nil), forCellWithReuseIdentifier: "cell4")
     }
     
     // Request cả 3 loại data: current, hourly forecast và weekly forecasat xong reload lại CollectionView
     func getWeatherData() {
+        // Lấy city lưu trong UserDefault, nếu chưa có thì lấy "Ha Noi"
+        localParamCity = UserDefaults.standard.string(forKey: KEY_SAVE_CITY) ?? "Ha Noi"
+        paramCurrent["city"] = localParamCity
+        paramHourly["city"] = localParamCity
+        paramWeekly["city"] = localParamCity
+        
         // GET Current Data
         guard let url = URL(string: "https://api.weatherbit.io/v2.0/current?") else {
             self.view.makeToast("Error: URL không tồn tại !!!")
@@ -68,7 +101,7 @@ class HomeVC: BaseViewController {
             
             self.currentData = Current(JSON(value)).data!
             self.stopAnimating()
-            print("Đã lấy được Current Data")
+            print("Đã lấy được Current Data của \(self.paramCurrent["city"]!)")
             
         }
         
@@ -88,9 +121,9 @@ class HomeVC: BaseViewController {
             let hourlyData = HourlyForecast(JSON(value))
             self.arrHourly = hourlyData.data!
             self.stopAnimating()
-            print("Đã lấy được Hourly Data")
+            print("Đã lấy được Hourly Data của \(self.paramHourly["city"]!)")
             self.collectionView.reloadData()
-           
+            
         }
         
         // GET Weekly Data
@@ -109,18 +142,18 @@ class HomeVC: BaseViewController {
             let weeklyData = WeeklyForecastModel(JSON(value))
             self.arrWeekly = weeklyData.data!
             self.stopAnimating()
-            print("Đã lấy được weekly data")
+            print("Đã lấy được weekly data của \(self.paramWeekly["city"]!)")
             self.collectionView.reloadData()
             
         }
-     
+        
     }//
     
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -129,9 +162,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         case 0:
             return CGSize(width: w, height: w*4/6)
         case 1:
-            return CGSize(width: w, height: w*2/5)
-        default:
+            return CGSize(width: w, height: w*1/3)
+        case 2:
             return CGSize(width: w, height: 620)
+        default:
+            return CGSize(width: w, height: 180)
         }
         
         
@@ -151,7 +186,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 cell.tempLabel.text = "\(temp)°"
             }
             if currentData.count > 0 ,let wind = currentData[0].windSpd {
-                cell.windLabel.text = "\(wind) km/h"
+                cell.windLabel.text = "\(round1(a: wind)) km/h"
             }
             if currentData.count > 0 ,let feelsLike = currentData[0].appTemp {
                 cell.feelsLikeLabel.text = "\(Int(feelsLike))°"
@@ -161,10 +196,10 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             }
             if currentData.count > 0 { cell.iconImage.image = .init(named: currentData[0].weather!.icon!) }
             
-            // action Button City
-            cell.handleCity = {
-                let vc = AddCityVC()
-                self.present(vc, animated: true)
+            // action Button Search City
+            cell.handleSearchCity = {
+                self.tabBarController?.selectedIndex = 1
+                
             }
             
             return cell
@@ -176,13 +211,44 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
             return cell2
         }
+        if indexPath.row == 2 {
+            let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! Cell3
+            cell3.arrData = arrWeekly
+            return cell3
+        }
         
-        let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! Cell3
-        cell3.arrData = arrWeekly
-        return cell3
+        // Cell 4: Đổ dữ liệu Curent Data
+        let cell4 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! Cell4
+        let item = currentData[0]
+
+        cell4.airQualityLabel.text = "\(item.aqi ?? 0)"
+        cell4.sunRiseLabel.text = item.sunrise ?? "00:00"
+        cell4.sunSetLabel.text = item.sunset ?? "00:00"
+        cell4.uvLabel.text = "\(item.uv ?? 0)"
+        cell4.precipLabel.text = "\(Int(item.precip ?? 0)) mm"
+        
+        
+        return cell4
         
     }
     
     
     
+}
+
+extension HomeVC {
+    func round1(a:Double)->Double {                          // func lấy bao nhiêu số sau dấu , của Float
+        let mu = pow(10.0,1.0)                // chỉnh số 2.0 thành 3.0, 4.0….
+        let r=round(a*mu)/mu
+        return r
+    }
+    
+    func stringFromAny(_ value:Any?) -> String {
+        
+        if let nonNil = value, !(nonNil is NSNull) {
+            
+            return String(describing: nonNil) // "Optional(12)"
+        }
+        return ""
+    }
 }

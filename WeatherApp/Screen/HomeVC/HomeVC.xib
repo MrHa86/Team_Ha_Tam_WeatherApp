@@ -34,7 +34,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
-                    <color key="backgroundColor" red="0.3230150342" green="0.5449105501" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bnL-fT-cz3" secondAttribute="trailing" id="3bj-Xu-ZbR"/>
                         <constraint firstAttribute="bottom" secondItem="bnL-fT-cz3" secondAttribute="bottom" id="4Er-RM-kqe"/>
@@ -51,7 +51,7 @@
                 <constraint firstAttribute="bottom" secondItem="kuV-AX-2N9" secondAttribute="bottom" id="Yeb-fU-sCW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kuV-AX-2N9" secondAttribute="trailing" id="kKt-wL-CQ7"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="132"/>
+            <point key="canvasLocation" x="-96" y="70"/>
         </view>
     </objects>
     <resources>

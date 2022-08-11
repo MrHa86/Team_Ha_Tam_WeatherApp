@@ -12,4 +12,5 @@ target 'WeatherApp' do
 	pod 'MarqueeLabel'
   pod 'NVActivityIndicatorView'
   pod 'Toast-Swift', '~> 5.0.1'
+  pod 'UIColor_Hex_Swift'
 end

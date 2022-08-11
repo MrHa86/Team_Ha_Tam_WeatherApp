@@ -7,6 +7,7 @@ PODS:
   - NVActivityIndicatorView/Base (5.1.1)
   - SwiftyJSON (5.0.1)
   - Toast-Swift (5.0.1)
+  - UIColor_Hex_Swift (5.1.7)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - SwiftyJSON
   - Toast-Swift (~> 5.0.1)
+  - UIColor_Hex_Swift
 
 SPEC REPOS:
   trunk:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - SwiftyJSON
     - Toast-Swift
+    - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  UIColor_Hex_Swift: 31cd3e47440f07a20d2503a36bb0437a445b3c29
 
-PODFILE CHECKSUM: f99126c4d15945179c095095eb3b122f388f62b7
+PODFILE CHECKSUM: dddfb28e65cbf0ca54871718d0ecc490b2683518
 
 COCOAPODS: 1.11.3

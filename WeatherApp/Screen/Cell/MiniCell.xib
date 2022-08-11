@@ -5,8 +5,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Medium.otf">
+            <string>iCielGotham-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,29 +24,37 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-JR-hif">
-                        <rect key="frame" x="0.0" y="0.0" width="153" height="367"/>
+                        <rect key="frame" x="3" y="0.0" width="147" height="367"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCC-Lg-3MC">
-                                <rect key="frame" x="0.0" y="0.0" width="153" height="92"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="147" height="92"/>
+                                <fontDescription key="fontDescription" name="iCielGotham-Medium" family="iCiel Gotham" pointSize="18"/>
+                                <color key="textColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-gv-4GW">
-                                <rect key="frame" x="0.0" y="275.5" width="153" height="91.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="275.5" width="147" height="91.5"/>
+                                <fontDescription key="fontDescription" name="iCielGotham-Medium" family="iCiel Gotham" pointSize="18"/>
+                                <color key="textColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gD8-qk-L8r">
-                                <rect key="frame" x="30.5" y="137.5" width="92" height="92"/>
+                                <rect key="frame" x="29.5" y="139.5" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gD8-qk-L8r" secondAttribute="height" multiplier="1:1" id="2Yb-4r-fPl"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLy-SH-QNM">
+                                <rect key="frame" x="0.0" y="123.5" width="147" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hLy-SH-QNM" firstAttribute="leading" secondItem="n8B-JR-hif" secondAttribute="leading" id="1QH-lI-kyF"/>
+                            <constraint firstItem="hLy-SH-QNM" firstAttribute="centerX" secondItem="n8B-JR-hif" secondAttribute="centerX" id="5BX-2W-zdj"/>
                             <constraint firstItem="HCC-Lg-3MC" firstAttribute="leading" secondItem="n8B-JR-hif" secondAttribute="leading" id="B6g-TE-wdz"/>
                             <constraint firstAttribute="trailing" secondItem="HCC-Lg-3MC" secondAttribute="trailing" id="CK6-hi-cld"/>
                             <constraint firstItem="gD8-qk-L8r" firstAttribute="width" secondItem="n8B-JR-hif" secondAttribute="width" multiplier="0.6" id="LYE-Fi-wdj"/>
@@ -48,27 +62,46 @@
                             <constraint firstItem="HCC-Lg-3MC" firstAttribute="top" secondItem="n8B-JR-hif" secondAttribute="top" id="YGM-E4-oGN"/>
                             <constraint firstItem="Zez-gv-4GW" firstAttribute="leading" secondItem="n8B-JR-hif" secondAttribute="leading" id="g3T-JC-kv7"/>
                             <constraint firstAttribute="bottom" secondItem="Zez-gv-4GW" secondAttribute="bottom" id="gnu-v9-mDr"/>
+                            <constraint firstItem="gD8-qk-L8r" firstAttribute="top" secondItem="hLy-SH-QNM" secondAttribute="bottom" id="l8d-Xz-1UL"/>
                             <constraint firstItem="HCC-Lg-3MC" firstAttribute="height" secondItem="n8B-JR-hif" secondAttribute="height" multiplier="0.25" id="mcN-YE-puN"/>
                             <constraint firstAttribute="trailing" secondItem="Zez-gv-4GW" secondAttribute="trailing" id="nNG-cy-Tuq"/>
                             <constraint firstItem="gD8-qk-L8r" firstAttribute="centerY" secondItem="n8B-JR-hif" secondAttribute="centerY" id="pGI-Am-BIC"/>
                             <constraint firstItem="Zez-gv-4GW" firstAttribute="height" secondItem="n8B-JR-hif" secondAttribute="height" multiplier="0.25" id="v5E-cK-VXZ"/>
+                            <constraint firstAttribute="trailing" secondItem="hLy-SH-QNM" secondAttribute="trailing" id="zV6-ut-v9J"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                <color key="value" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="n8B-JR-hif" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8Kd-FL-WMw"/>
-                <constraint firstAttribute="trailing" secondItem="n8B-JR-hif" secondAttribute="trailing" id="LED-d6-zpD"/>
+                <constraint firstAttribute="trailing" secondItem="n8B-JR-hif" secondAttribute="trailing" constant="3" id="LED-d6-zpD"/>
                 <constraint firstAttribute="bottom" secondItem="n8B-JR-hif" secondAttribute="bottom" id="Vq9-zk-iq6"/>
-                <constraint firstItem="n8B-JR-hif" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jxo-6d-eKh"/>
+                <constraint firstItem="n8B-JR-hif" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="jxo-6d-eKh"/>
             </constraints>
             <connections>
                 <outlet property="hourLabel" destination="HCC-Lg-3MC" id="4Vg-uj-e6v"/>
+                <outlet property="humidityLabel" destination="hLy-SH-QNM" id="d7o-JT-aB0"/>
                 <outlet property="iconImage" destination="gD8-qk-L8r" id="fHK-dE-v6i"/>
                 <outlet property="tempLabel" destination="Zez-gv-4GW" id="3b1-6e-7jy"/>
             </connections>
             <point key="canvasLocation" x="132" y="132"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -17,15 +17,12 @@ class Cell2: UICollectionViewCell {
         }
     }
     
-    @IBOutlet weak var line1: UIView!
-    @IBOutlet weak var line2: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         configCollectionView2()
         
-        line1.alpha = 0.4
-        line2.alpha = 0.4
+        
     }
     
     func configCollectionView2() {
@@ -49,6 +46,7 @@ extension Cell2: UICollectionViewDelegate, UICollectionViewDataSource, UICollect
         minicell.hourLabel.text = localTimeToHour(time: item.timestampLocal!)
         minicell.iconImage.image = .init(named: item.weather!.icon!)
         minicell.tempLabel.text = "\(Int(item.temp ?? 0))°"
+        minicell.humidityLabel.text = "\(item.rh ?? 0)%"
         return minicell
     }
     

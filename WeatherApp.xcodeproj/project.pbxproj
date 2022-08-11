@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D40627028A3E4790067A46D /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D40626D28A3E4790067A46D /* Gotham-Thin.otf */; };
+		6D40627128A3E4790067A46D /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D40626E28A3E4790067A46D /* Gotham-Ultra.otf */; };
+		6D40627228A3E4790067A46D /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D40626F28A3E4790067A46D /* Gotham-Medium.otf */; };
+		6D40627528A3F53C0067A46D /* Cell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40627328A3F53C0067A46D /* Cell4.swift */; };
+		6D40627628A3F53C0067A46D /* Cell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D40627428A3F53C0067A46D /* Cell4.xib */; };
 		6D44B5D3289FFEB6009849CB /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44B5D1289FFEB6009849CB /* AddCityVC.swift */; };
 		6D44B5D4289FFEB6009849CB /* AddCityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D44B5D2289FFEB6009849CB /* AddCityVC.xib */; };
-		6D44B5D728A004D6009849CB /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44B5D528A004D6009849CB /* CityCell.swift */; };
-		6D44B5D828A004D6009849CB /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D44B5D628A004D6009849CB /* CityCell.xib */; };
+		6D58C32F28A276480010CEDF /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58C32D28A276480010CEDF /* SettingVC.swift */; };
+		6D58C33028A276480010CEDF /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D58C32E28A276480010CEDF /* SettingVC.xib */; };
+		6D58C33228A288160010CEDF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58C33128A288160010CEDF /* TabBarViewController.swift */; };
+		6D58C33428A395660010CEDF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58C33328A395660010CEDF /* DataManager.swift */; };
+		6D58C33828A3998A0010CEDF /* CityTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58C33628A3998A0010CEDF /* CityTableCell.swift */; };
+		6D58C33928A3998A0010CEDF /* CityTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D58C33728A3998A0010CEDF /* CityTableCell.xib */; };
 		6D6C60DB289C2FCD00732AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C60DA289C2FCD00732AB3 /* AppDelegate.swift */; };
 		6D6C60DD289C2FCD00732AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C60DC289C2FCD00732AB3 /* SceneDelegate.swift */; };
 		6D6C60E4289C2FCF00732AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C60E3289C2FCF00732AB3 /* Assets.xcassets */; };
@@ -39,10 +48,19 @@
 /* Begin PBXFileReference section */
 		2A11209E00696C42152F0B14 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		5ADAD99D9101EF0561451669 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6D40626D28A3E4790067A46D /* Gotham-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Thin.otf"; sourceTree = "<group>"; };
+		6D40626E28A3E4790067A46D /* Gotham-Ultra.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Ultra.otf"; sourceTree = "<group>"; };
+		6D40626F28A3E4790067A46D /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		6D40627328A3F53C0067A46D /* Cell4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell4.swift; sourceTree = "<group>"; };
+		6D40627428A3F53C0067A46D /* Cell4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell4.xib; sourceTree = "<group>"; };
 		6D44B5D1289FFEB6009849CB /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
 		6D44B5D2289FFEB6009849CB /* AddCityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCityVC.xib; sourceTree = "<group>"; };
-		6D44B5D528A004D6009849CB /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
-		6D44B5D628A004D6009849CB /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		6D58C32D28A276480010CEDF /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		6D58C32E28A276480010CEDF /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
+		6D58C33128A288160010CEDF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6D58C33328A395660010CEDF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6D58C33628A3998A0010CEDF /* CityTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableCell.swift; sourceTree = "<group>"; };
+		6D58C33728A3998A0010CEDF /* CityTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableCell.xib; sourceTree = "<group>"; };
 		6D6C60D7289C2FCD00732AB3 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6C60DA289C2FCD00732AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D6C60DC289C2FCD00732AB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,15 +108,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D40626C28A3E4470067A46D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6D40626F28A3E4790067A46D /* Gotham-Medium.otf */,
+				6D40626D28A3E4790067A46D /* Gotham-Thin.otf */,
+				6D40626E28A3E4790067A46D /* Gotham-Ultra.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		6D44B5D0289FFE87009849CB /* AddCityVC */ = {
 			isa = PBXGroup;
 			children = (
 				6D44B5D1289FFEB6009849CB /* AddCityVC.swift */,
 				6D44B5D2289FFEB6009849CB /* AddCityVC.xib */,
-				6D44B5D528A004D6009849CB /* CityCell.swift */,
-				6D44B5D628A004D6009849CB /* CityCell.xib */,
+				6D58C33628A3998A0010CEDF /* CityTableCell.swift */,
+				6D58C33728A3998A0010CEDF /* CityTableCell.xib */,
 			);
 			path = AddCityVC;
+			sourceTree = "<group>";
+		};
+		6D58C32C28A276210010CEDF /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				6D58C32D28A276480010CEDF /* SettingVC.swift */,
+				6D58C32E28A276480010CEDF /* SettingVC.xib */,
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		6D58C33528A395D90010CEDF /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				6D58C33328A395660010CEDF /* DataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		6D6C60CE289C2FCD00732AB3 = {
@@ -122,15 +167,17 @@
 		6D6C60D9289C2FCD00732AB3 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				6D40626C28A3E4470067A46D /* Font */,
 				6D6C60E8289C2FCF00732AB3 /* Info.plist */,
 				6D6C60DA289C2FCD00732AB3 /* AppDelegate.swift */,
 				6D6C60DC289C2FCD00732AB3 /* SceneDelegate.swift */,
 				6D6C60E3289C2FCF00732AB3 /* Assets.xcassets */,
 				6D6C60E5289C2FCF00732AB3 /* LaunchScreen.storyboard */,
 				6D6C60F6289CFEC300732AB3 /* BaseViewController.swift */,
+				6D6C6111289E528200732AB3 /* ExtensionAttribute.swift */,
 				6D6C6137289F7A1700732AB3 /* Screen */,
 				6D6C60F8289D5AA300732AB3 /* Model */,
-				6D6C6111289E528200732AB3 /* ExtensionAttribute.swift */,
+				6D58C33528A395D90010CEDF /* DataManager */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -158,6 +205,8 @@
 		6D6C6137289F7A1700732AB3 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6D58C33128A288160010CEDF /* TabBarViewController.swift */,
+				6D58C32C28A276210010CEDF /* SettingVC */,
 				6D44B5D0289FFE87009849CB /* AddCityVC */,
 				6D6C611A289E9D0200732AB3 /* HomeVC */,
 				6D6C6138289F7A2700732AB3 /* Cell */,
@@ -178,6 +227,8 @@
 				6D6C612C289ED97D00732AB3 /* MiniCell.xib */,
 				6D6C6133289F6E9100732AB3 /* TableViewCell1.swift */,
 				6D6C6134289F6E9100732AB3 /* TableViewCell1.xib */,
+				6D40627328A3F53C0067A46D /* Cell4.swift */,
+				6D40627428A3F53C0067A46D /* Cell4.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -254,10 +305,15 @@
 				6D6C60E7289C2FCF00732AB3 /* LaunchScreen.storyboard in Resources */,
 				6D6C60E4289C2FCF00732AB3 /* Assets.xcassets in Resources */,
 				6D6C612E289ED97D00732AB3 /* MiniCell.xib in Resources */,
+				6D58C33028A276480010CEDF /* SettingVC.xib in Resources */,
+				6D40627628A3F53C0067A46D /* Cell4.xib in Resources */,
+				6D40627128A3E4790067A46D /* Gotham-Ultra.otf in Resources */,
 				6D44B5D4289FFEB6009849CB /* AddCityVC.xib in Resources */,
 				6D6C6122289EA27700732AB3 /* Cell2.xib in Resources */,
+				6D40627028A3E4790067A46D /* Gotham-Thin.otf in Resources */,
 				6D6C6119289E9C6800732AB3 /* HomeVC.xib in Resources */,
-				6D44B5D828A004D6009849CB /* CityCell.xib in Resources */,
+				6D58C33928A3998A0010CEDF /* CityTableCell.xib in Resources */,
+				6D40627228A3E4790067A46D /* Gotham-Medium.otf in Resources */,
 				6D6C611E289E9F4700732AB3 /* Cell1.xib in Resources */,
 				6D6C6136289F6E9100732AB3 /* TableViewCell1.xib in Resources */,
 				6D6C6126289EA3BB00732AB3 /* Cell3.xib in Resources */,
@@ -314,20 +370,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D44B5D3289FFEB6009849CB /* AddCityVC.swift in Sources */,
+				6D58C32F28A276480010CEDF /* SettingVC.swift in Sources */,
 				6D6C60F7289CFEC300732AB3 /* BaseViewController.swift in Sources */,
-				6D44B5D728A004D6009849CB /* CityCell.swift in Sources */,
 				6D6C60FA289D5ACB00732AB3 /* WeeklyForecastModel.swift in Sources */,
 				6D6C6106289D760200732AB3 /* TempFormat.swift in Sources */,
 				6D6C6112289E528200732AB3 /* ExtensionAttribute.swift in Sources */,
 				6D6C6121289EA27700732AB3 /* Cell2.swift in Sources */,
+				6D58C33428A395660010CEDF /* DataManager.swift in Sources */,
 				6D6C6135289F6E9100732AB3 /* TableViewCell1.swift in Sources */,
 				6D6C6125289EA3BB00732AB3 /* Cell3.swift in Sources */,
+				6D58C33228A288160010CEDF /* TabBarViewController.swift in Sources */,
 				6D6C60FC289D5B6600732AB3 /* HourlyForecast.swift in Sources */,
+				6D58C33828A3998A0010CEDF /* CityTableCell.swift in Sources */,
 				6D6C60DB289C2FCD00732AB3 /* AppDelegate.swift in Sources */,
 				6D6C6118289E9C6800732AB3 /* HomeVC.swift in Sources */,
 				6D6C612D289ED97D00732AB3 /* MiniCell.swift in Sources */,
 				6D6C611D289E9F4700732AB3 /* Cell1.swift in Sources */,
 				6D6C60DD289C2FCD00732AB3 /* SceneDelegate.swift in Sources */,
+				6D40627528A3F53C0067A46D /* Cell4.swift in Sources */,
 				6D6C60FE289D5C2900732AB3 /* Current.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +535,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +564,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

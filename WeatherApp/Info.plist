@@ -26,5 +26,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gotham-Medium.otf</string>
+		<string>Gotham-Thin.otf</string>
+		<string>Gotham-Ultra.otf</string>
+	</array>
 </dict>
 </plist>

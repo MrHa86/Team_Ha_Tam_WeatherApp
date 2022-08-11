@@ -37,8 +37,7 @@ extension Cell3: UITableViewDelegate, UITableViewDataSource {
         return arrData.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
+        return 60    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tbvCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell1
@@ -47,6 +46,7 @@ extension Cell3: UITableViewDelegate, UITableViewDataSource {
         tbvCell.maxTempLabel.text = "\(Int( item.maxTemp ?? 0))°"
         tbvCell.minTempLabel.text = "\(Int( item.minTemp ?? 0))°"
         tbvCell.dayLabel.text = getDayOfWeek(item.datetime!)
+        tbvCell.humidityLabel.text = "\(item.rh ?? 0)%"
         
         return tbvCell
     }

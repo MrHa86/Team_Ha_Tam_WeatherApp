@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewCell1: UITableViewCell {
 
+    @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var minTempLabel: UILabel!
     @IBOutlet weak var maxTempLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!

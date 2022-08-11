@@ -17,15 +17,16 @@ class Cell1: UICollectionViewCell {
     @IBOutlet weak var feelsLikeLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     
-    var handleCity : (() -> Void)?
+    var handleSearchCity : (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     @IBAction func actionChooseCity(_ sender: UIButton) {
-        handleCity?()
+        handleSearchCity?()
         
     }
 }
