@@ -65,9 +65,9 @@
                                                     <constraint firstAttribute="bottom" secondItem="Twp-Fc-f9g" secondAttribute="bottom" constant="8" id="obK-32-L5y"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyr-gy-Jq9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyr-gy-Jq9">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="109.5"/>
-                                                <fontDescription key="fontDescription" name="iCielGotham-Ultra" family="iCiel Gotham" pointSize="71"/>
+                                                <fontDescription key="fontDescription" name="iCielGotham-Ultra" family="iCiel Gotham" pointSize="66"/>
                                                 <color key="textColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

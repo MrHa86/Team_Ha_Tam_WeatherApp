@@ -25,11 +25,11 @@ class TabBarViewController: UITabBarController {
         let cityVCTabItem = UITabBarItem(title: "Location", image: .init(named: "pin"), selectedImage: .init(named: "pin"))
         cityVC.tabBarItem = cityVCTabItem
         
-        let settingVC = SettingVC()
-        let settingVCTabItem = UITabBarItem(title: "Setting", image: .init(named: "User"), selectedImage: .init(named: "User"))
-        settingVC.tabBarItem = settingVCTabItem
+//        let settingVC = SettingVC()
+//        let settingVCTabItem = UITabBarItem(title: "Setting", image: .init(named: "User"), selectedImage: .init(named: "User"))
+//        settingVC.tabBarItem = settingVCTabItem
         
-        self.setViewControllers([homeVC, cityVC, settingVC], animated: true)
+        self.setViewControllers([homeVC, cityVC], animated: true)
         
         self.tabBar.tintColor = UIColor("#183b8a")
         self.tabBar.unselectedItemTintColor = .white

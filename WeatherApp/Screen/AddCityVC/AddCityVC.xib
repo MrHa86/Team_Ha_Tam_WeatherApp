@@ -28,8 +28,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a city" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jx3-gc-04Z">
-                                    <rect key="frame" x="16" y="21.5" width="265" height="42.5"/>
-                                    <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="32" y="21.5" width="265" height="42.5"/>
+                                    <color key="backgroundColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -43,11 +43,13 @@
                                                 <constraint firstAttribute="width" secondItem="0Q0-RU-oFY" secondAttribute="height" multiplier="1:1" id="Nvy-Bp-mM7"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkJ-OU-jhB">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkJ-OU-jhB">
                                             <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
                                             <connections>
                                                 <action selector="actionSearch:" destination="-1" eventType="touchUpInside" id="pzQ-0v-oCY"/>
                                             </connections>
@@ -65,15 +67,15 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="jx3-gc-04Z" firstAttribute="leading" secondItem="3mt-04-oW8" secondAttribute="leading" constant="16" id="0v9-zz-VSJ"/>
+                                <constraint firstItem="jx3-gc-04Z" firstAttribute="leading" secondItem="3mt-04-oW8" secondAttribute="leading" constant="32" id="0v9-zz-VSJ"/>
                                 <constraint firstItem="0Q0-RU-oFY" firstAttribute="height" secondItem="jx3-gc-04Z" secondAttribute="height" id="5C9-xc-ec6"/>
                                 <constraint firstItem="uYh-Pb-vck" firstAttribute="top" secondItem="3mt-04-oW8" secondAttribute="top" id="81Y-si-mnn"/>
                                 <constraint firstItem="uYh-Pb-vck" firstAttribute="centerY" secondItem="3mt-04-oW8" secondAttribute="centerY" id="O8g-IH-t0K"/>
                                 <constraint firstAttribute="bottom" secondItem="uYh-Pb-vck" secondAttribute="bottom" id="Y5V-Xu-csP"/>
                                 <constraint firstItem="jx3-gc-04Z" firstAttribute="height" secondItem="3mt-04-oW8" secondAttribute="height" multiplier="0.5" id="gFV-FP-G8M"/>
-                                <constraint firstItem="uYh-Pb-vck" firstAttribute="leading" secondItem="jx3-gc-04Z" secondAttribute="trailing" constant="16" id="gZR-RR-g4s"/>
+                                <constraint firstItem="uYh-Pb-vck" firstAttribute="leading" secondItem="jx3-gc-04Z" secondAttribute="trailing" id="gZR-RR-g4s"/>
                                 <constraint firstItem="jx3-gc-04Z" firstAttribute="centerY" secondItem="3mt-04-oW8" secondAttribute="centerY" id="hdC-cz-UPE"/>
                                 <constraint firstAttribute="trailing" secondItem="uYh-Pb-vck" secondAttribute="trailing" constant="32" id="sMs-eY-9TW"/>
                             </constraints>
@@ -83,7 +85,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="3mt-04-oW8" firstAttribute="top" secondItem="Ozf-0p-KGk" secondAttribute="top" id="JfS-sr-2ab"/>
                         <constraint firstItem="Qmq-MN-ULq" firstAttribute="top" secondItem="3mt-04-oW8" secondAttribute="bottom" id="M2V-9h-h2k"/>

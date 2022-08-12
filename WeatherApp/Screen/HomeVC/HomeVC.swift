@@ -46,25 +46,39 @@ class HomeVC: BaseViewController {
     var arrHourly: [DataHourly] = []
     var arrWeekly: [DataWeekly] = []
     
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getWeatherData()
         configCollectionView()
         
+        // Nhận Notification city vừa chọn
         NotificationCenter.default.addObserver(self, selector: #selector(didSelectCity(_:)), name: NSNotification.Name("did.select.city"), object: nil)
-        let color1 = hexStringToUIColor("#ce5b06")
-        view.backgroundColor = color1
-        
+   
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Lấy dữ liệu sẵn chuẩn bị trước cho AddCityVC
+        DataManager.shared.getCurrentDataForAddCityVC()
+    }
+   
     
     // Xử lý khi nhận Notification
     @objc func didSelectCity(_ notification: Notification) {
         print(notification.userInfo!["userInfo"] as Any)
         let city = notification.userInfo!["userInfo"]
-        self.localParamCity = stringFromAny(city)
-        
-        self.getWeatherData()
+        let strCity = stringFromAny(city)
+        if self.localParamCity == strCity {
+            print("Vừa chọn city hiện tại, không cần Get data ")
+        } else {
+            self.localParamCity = strCity
+            self.getWeatherData()       // nếu đã lấy dl trước thì bỏ
+        }
     }
     
     func configCollectionView() {
@@ -176,27 +190,17 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! Cell1
             
-            if currentData.count > 0 , let cityName = currentData[0].cityName {
-                cell.cityLabel.text = cityName
+            if currentData.count > 0 {
+                cell.cityLabel.text = currentData[0].cityName
+                cell.discriptionLabel.text = currentData[0].weather?.description
+                cell.tempLabel.text = "\(currentData[0].temp ?? 0)°"
+                cell.windLabel.text = "\(round1(a: currentData[0].windSpd ?? 0.0)) km/h"
+                cell.feelsLikeLabel.text = "\(Int(currentData[0].appTemp ?? 0))°"
+                cell.humidityLabel.text = "\(currentData[0].rh ?? 0)%"
+                cell.iconImage.image = .init(named: currentData[0].weather!.icon!)
             }
-            if currentData.count > 0 ,let description = currentData[0].weather?.description {
-                cell.discriptionLabel.text = description
-            }
-            if currentData.count > 0 ,let temp = currentData[0].temp {
-                cell.tempLabel.text = "\(temp)°"
-            }
-            if currentData.count > 0 ,let wind = currentData[0].windSpd {
-                cell.windLabel.text = "\(round1(a: wind)) km/h"
-            }
-            if currentData.count > 0 ,let feelsLike = currentData[0].appTemp {
-                cell.feelsLikeLabel.text = "\(Int(feelsLike))°"
-            }
-            if currentData.count > 0 ,let humidity = currentData[0].rh {
-                cell.humidityLabel.text = "\(humidity)%"
-            }
-            if currentData.count > 0 { cell.iconImage.image = .init(named: currentData[0].weather!.icon!) }
             
-            // action Button Search City
+            // action khi bấm vào kính lúp bên cạnh tên City
             cell.handleSearchCity = {
                 self.tabBarController?.selectedIndex = 1
                 

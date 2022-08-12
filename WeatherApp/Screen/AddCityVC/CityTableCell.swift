@@ -9,6 +9,9 @@ import UIKit
 
 class CityTableCell: UITableViewCell {
 
+
+ 
+    @IBOutlet weak var wallPaperImage: UIImageView!
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
