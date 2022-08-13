@@ -23,6 +23,7 @@ class Cell1: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        
     }
 
     @IBAction func actionChooseCity(_ sender: UIButton) {

@@ -92,7 +92,7 @@ class HomeVC: BaseViewController {
     
     // Request cả 3 loại data: current, hourly forecast và weekly forecasat xong reload lại CollectionView
     func getWeatherData() {
-        // Lấy city lưu trong UserDefault, nếu chưa có thì lấy "Ha Noi"
+        // Lấy city lưu trong UserDefault, nếu chưa có thì lấy "Ha Noi" làm mặc định
         localParamCity = UserDefaults.standard.string(forKey: KEY_SAVE_CITY) ?? "Ha Noi"
         paramCurrent["city"] = localParamCity
         paramHourly["city"] = localParamCity
@@ -174,7 +174,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let w = collectionView.bounds.width
         switch indexPath.row {
         case 0:
-            return CGSize(width: w, height: w*4/6)
+            return CGSize(width: w, height: w*45/60)
         case 1:
             return CGSize(width: w, height: w*1/3)
         case 2:
@@ -189,11 +189,12 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         // Cell 1: Đổ dữ liệu Current data
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! Cell1
-            
+         
             if currentData.count > 0 {
                 cell.cityLabel.text = currentData[0].cityName
                 cell.discriptionLabel.text = currentData[0].weather?.description
                 cell.tempLabel.text = "\(currentData[0].temp ?? 0)°"
+                cell.tempLabel.setTextColorToGradient(image: .init(named: "Day")!)
                 cell.windLabel.text = "\(round1(a: currentData[0].windSpd ?? 0.0)) km/h"
                 cell.feelsLikeLabel.text = "\(Int(currentData[0].appTemp ?? 0))°"
                 cell.humidityLabel.text = "\(currentData[0].rh ?? 0)%"
@@ -215,6 +216,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
             return cell2
         }
+        // Cell 3: Là TableView. Đổ dữ liệu WeeklyData
         if indexPath.row == 2 {
             let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! Cell3
             cell3.arrData = arrWeekly
@@ -254,5 +256,16 @@ extension HomeVC {
             return String(describing: nonNil) // "Optional(12)"
         }
         return ""
+    }
+}
+
+extension UILabel {
+    func setTextColorToGradient(image: UIImage) {
+        UIGraphicsBeginImageContext(frame.size)
+        image.draw(in: bounds)
+        let myGradient = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        self.textColor = UIColor(patternImage: myGradient!)
     }
 }

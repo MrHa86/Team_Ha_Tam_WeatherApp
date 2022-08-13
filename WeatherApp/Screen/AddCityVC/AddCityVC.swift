@@ -30,7 +30,7 @@ class AddCityVC: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if DataManager.shared.arrCurrentData[0].cityName == "" {
+        if DataManager.shared.arrCurrentData.count > 0 && DataManager.shared.arrCurrentData[0].cityName == "" {
             print("Chưa có DL")
             // chờ 2s cho data về rồi reload TableView
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

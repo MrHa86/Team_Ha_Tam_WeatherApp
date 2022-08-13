@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La7-fy-B7f">
-                                <rect key="frame" x="298" y="53" width="83" height="21"/>
+                                <rect key="frame" x="298" y="53" width="87" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="TsE-nY-M0y"/>
                                 </constraints>
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cyv-ab-oGk" firstAttribute="height" secondItem="0en-Ch-GUe" secondAttribute="height" multiplier="0.8" id="7Hr-BI-lsJ"/>
-                            <constraint firstItem="x2D-j7-OfT" firstAttribute="leading" secondItem="La7-fy-B7f" secondAttribute="trailing" constant="8" id="RSH-LC-JTG"/>
+                            <constraint firstItem="x2D-j7-OfT" firstAttribute="leading" secondItem="La7-fy-B7f" secondAttribute="trailing" constant="4" id="RSH-LC-JTG"/>
                             <constraint firstItem="L2s-zx-JwK" firstAttribute="width" secondItem="0en-Ch-GUe" secondAttribute="width" multiplier="0.35" id="RaP-vL-MCt"/>
                             <constraint firstItem="La7-fy-B7f" firstAttribute="centerY" secondItem="0en-Ch-GUe" secondAttribute="centerY" id="TV6-fP-QXs"/>
                             <constraint firstItem="L2s-zx-JwK" firstAttribute="centerY" secondItem="0en-Ch-GUe" secondAttribute="centerY" id="TeQ-aE-Snc"/>

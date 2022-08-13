@@ -26,13 +26,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-JR-hif">
                         <rect key="frame" x="3" y="0.0" width="147" height="367"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCC-Lg-3MC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCC-Lg-3MC">
                                 <rect key="frame" x="0.0" y="0.0" width="147" height="92"/>
                                 <fontDescription key="fontDescription" name="iCielGotham-Medium" family="iCiel Gotham" pointSize="18"/>
                                 <color key="textColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-gv-4GW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-gv-4GW">
                                 <rect key="frame" x="0.0" y="275.5" width="147" height="91.5"/>
                                 <fontDescription key="fontDescription" name="iCielGotham-Medium" family="iCiel Gotham" pointSize="18"/>
                                 <color key="textColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -44,8 +44,8 @@
                                     <constraint firstAttribute="width" secondItem="gD8-qk-L8r" secondAttribute="height" multiplier="1:1" id="2Yb-4r-fPl"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLy-SH-QNM">
-                                <rect key="frame" x="0.0" y="123.5" width="147" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLy-SH-QNM">
+                                <rect key="frame" x="0.0" y="139.5" width="147" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,6 +91,7 @@
                 <constraint firstItem="n8B-JR-hif" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="jxo-6d-eKh"/>
             </constraints>
             <connections>
+                <outlet property="borderView" destination="n8B-JR-hif" id="6Xg-AT-DEo"/>
                 <outlet property="hourLabel" destination="HCC-Lg-3MC" id="4Vg-uj-e6v"/>
                 <outlet property="humidityLabel" destination="hLy-SH-QNM" id="d7o-JT-aB0"/>
                 <outlet property="iconImage" destination="gD8-qk-L8r" id="fHK-dE-v6i"/>
