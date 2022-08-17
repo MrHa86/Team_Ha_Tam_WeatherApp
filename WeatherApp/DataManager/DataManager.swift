@@ -24,7 +24,7 @@ class DataManager {
     var paramCurrent: Parameters = ["key": "745e4fb30356479f90eb88f6c5020641",          // param để get Current Data
                                     "city": ""]
 
-    
+    var checkIsDay: Bool = true
     
     // Lấy Dl trước cho AddCityVC
     func getCurrentDataForAddCityVC() {
@@ -63,7 +63,7 @@ class DataManager {
         
     }
     
-    // Lấy DL trước cho HomeVC
+  
     
     
 }

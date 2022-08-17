@@ -36,7 +36,7 @@
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="krj-4M-dqx" secondAttribute="trailing" id="Fax-Lm-dHK"/>
                             <constraint firstItem="krj-4M-dqx" firstAttribute="top" secondItem="59H-hF-Ye4" secondAttribute="top" id="hYD-Ya-jqz"/>
@@ -47,6 +47,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="59H-hF-Ye4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BkU-Yn-yN7"/>
                 <constraint firstAttribute="trailing" secondItem="59H-hF-Ye4" secondAttribute="trailing" id="CDi-FQ-cGY"/>

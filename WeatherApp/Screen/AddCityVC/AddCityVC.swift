@@ -18,7 +18,7 @@ class AddCityVC: BaseViewController {
     
     var searchResult: [String] = []                 // mảng để lưu các city trả về khi search
    
-    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,13 +57,9 @@ class AddCityVC: BaseViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CityTableCell", bundle: nil), forCellReuseIdentifier: "cityCell")
         tableView.tableFooterView = UIView()
-        
-
-        
+  
     }
-    
-    
-    
+    //MARK: -Tap on Search Button
     @IBAction func actionSearch(_ sender: UIButton) {
         // mỗi lần search thì reset lại tableViewSearch
         searchResult = []
@@ -75,9 +71,13 @@ class AddCityVC: BaseViewController {
         }
         startAnimating()
         DataManager.shared.checkIsSearch = true
+        
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchTextField.text
+        searchRequest.resultTypes = .address
         let search = MKLocalSearch(request: searchRequest)
+        
+        
         
         search.start { (response, error) in
             guard let response = response else {
@@ -101,7 +101,7 @@ class AddCityVC: BaseViewController {
     
     
 }
-
+    //MARK: - Delegate, Datasource
 extension AddCityVC: UITableViewDelegate, UITableViewDataSource {
     
     
@@ -134,13 +134,7 @@ extension AddCityVC: UITableViewDelegate, UITableViewDataSource {
         } else {                // Nếu là TBV Recent City
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath) as! CityTableCell
-            let item = DataManager.shared.arrCurrentData[indexPath.row]
-            cell.cityLabel.text = item.cityName
-            cell.tempLabel.text = "\(item.temp ?? 0)°"
-            cell.iconImage.image = .init(named: item.weather!.icon!+"2")
-            if item.weather!.icon!.suffix(1) == "d" {
-                cell.wallPaperImage.image = .init(named: "Day")
-            } else { cell.wallPaperImage.image = .init(named: "Night") }
+            cell.bindData(item: DataManager.shared.arrCurrentData[indexPath.row])
             return cell
         }
     }
@@ -232,6 +226,7 @@ extension AddCityVC: UITextFieldDelegate {
     }
 }
 
+    // MARK: - Extension
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

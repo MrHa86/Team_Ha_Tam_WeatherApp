@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="bnL-fT-cz3" id="cba-iO-EWt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wallPaperImageView" destination="HdN-BX-9qS" id="ASA-PK-872"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,6 +24,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuV-AX-2N9">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallPaper2" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-BX-9qS">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </imageView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bnL-fT-cz3">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,11 +38,15 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bnL-fT-cz3" secondAttribute="trailing" id="3bj-Xu-ZbR"/>
                         <constraint firstAttribute="bottom" secondItem="bnL-fT-cz3" secondAttribute="bottom" id="4Er-RM-kqe"/>
+                        <constraint firstAttribute="bottom" secondItem="HdN-BX-9qS" secondAttribute="bottom" id="9WJ-Lf-EEX"/>
                         <constraint firstItem="bnL-fT-cz3" firstAttribute="leading" secondItem="kuV-AX-2N9" secondAttribute="leading" id="LSZ-hC-3dM"/>
+                        <constraint firstAttribute="trailing" secondItem="HdN-BX-9qS" secondAttribute="trailing" id="YA1-AE-chs"/>
+                        <constraint firstItem="HdN-BX-9qS" firstAttribute="leading" secondItem="kuV-AX-2N9" secondAttribute="leading" id="bjg-ad-uHc"/>
+                        <constraint firstItem="HdN-BX-9qS" firstAttribute="top" secondItem="kuV-AX-2N9" secondAttribute="top" id="dGS-Du-Txu"/>
                         <constraint firstItem="bnL-fT-cz3" firstAttribute="top" secondItem="kuV-AX-2N9" secondAttribute="top" id="hcj-ly-esT"/>
                     </constraints>
                 </view>
@@ -55,6 +63,7 @@
         </view>
     </objects>
     <resources>
+        <image name="wallPaper2" width="640" height="759"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

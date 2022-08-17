@@ -12,9 +12,10 @@ import NVActivityIndicatorView
 import Kingfisher
 
 class HomeVC: BaseViewController {
-    // Main collectionView
+    // MARK: -Outlet
+    @IBOutlet weak var wallPaperImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    // MARK: -
     // Param dùng để GET Data từ API
     var paramCurrent: Parameters = ["key": "745e4fb30356479f90eb88f6c5020641",
                                     "city": ""]
@@ -46,9 +47,7 @@ class HomeVC: BaseViewController {
     var arrHourly: [DataHourly] = []
     var arrWeekly: [DataWeekly] = []
     
-    
-
-    
+ // MARK: -LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,10 +76,12 @@ class HomeVC: BaseViewController {
             print("Vừa chọn city hiện tại, không cần Get data ")
         } else {
             self.localParamCity = strCity
-            self.getWeatherData()       // nếu đã lấy dl trước thì bỏ
+            self.getWeatherData()
+            self.collectionView.setContentOffset(CGPoint(x: 0.0, y: -20.0), animated: true)
+            
         }
     }
-    
+    // MARK: -CollectionView Setup
     func configCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -88,8 +89,9 @@ class HomeVC: BaseViewController {
         collectionView.register(UINib(nibName: "Cell2", bundle: nil), forCellWithReuseIdentifier: "cell2")
         collectionView.register(UINib(nibName: "Cell3", bundle: nil), forCellWithReuseIdentifier: "cell3")
         collectionView.register(UINib(nibName: "Cell4", bundle: nil), forCellWithReuseIdentifier: "cell4")
+        collectionView.register(UINib(nibName: "Cell1-1", bundle: nil), forCellWithReuseIdentifier: "cell1-1")  // theo design Home VC của Tâm
     }
-    
+    //MARK: -Get Data
     // Request cả 3 loại data: current, hourly forecast và weekly forecasat xong reload lại CollectionView
     func getWeatherData() {
         // Lấy city lưu trong UserDefault, nếu chưa có thì lấy "Ha Noi" làm mặc định
@@ -114,6 +116,7 @@ class HomeVC: BaseViewController {
             }
             
             self.currentData = Current(JSON(value)).data!
+            DataManager.shared.checkIsDay = self.currentData[0].weather?.icon?.suffix(1) == "d" ? true : false
             self.stopAnimating()
             print("Đã lấy được Current Data của \(self.paramCurrent["city"]!)")
             
@@ -164,7 +167,7 @@ class HomeVC: BaseViewController {
     }//
     
 }
-
+    // MARK: -CollectionView Delegate, DataSource
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
@@ -174,7 +177,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let w = collectionView.bounds.width
         switch indexPath.row {
         case 0:
-            return CGSize(width: w, height: w*45/60)
+            return CGSize(width: w, height: w*45/60)        //  45/60 nếu là Cell1,
+//            return CGSize(width: w, height: w*90/60)        //  90/60 nếu Cell1-1
         case 1:
             return CGSize(width: w, height: w*1/3)
         case 2:
@@ -189,31 +193,17 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         // Cell 1: Đổ dữ liệu Current data
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! Cell1
-         
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1-1", for: indexPath) as! Cell1_1
+
             if currentData.count > 0 {
-                cell.cityLabel.text = currentData[0].cityName
-                cell.discriptionLabel.text = currentData[0].weather?.description
-                cell.tempLabel.text = "\(currentData[0].temp ?? 0)°"
-                cell.tempLabel.setTextColorToGradient(image: .init(named: "Day")!)
-                cell.windLabel.text = "\(round1(a: currentData[0].windSpd ?? 0.0)) km/h"
-                cell.feelsLikeLabel.text = "\(Int(currentData[0].appTemp ?? 0))°"
-                cell.humidityLabel.text = "\(currentData[0].rh ?? 0)%"
-                cell.iconImage.image = .init(named: currentData[0].weather!.icon!)
+                cell.bindData(item: currentData[0])
             }
-            
-            // action khi bấm vào kính lúp bên cạnh tên City
-            cell.handleSearchCity = {
-                self.tabBarController?.selectedIndex = 1
-                
-            }
-            
             return cell
         }
         // Cell2: là collectionView xoay ngang,  Đổ dữ liệu Hourly data vào
         if indexPath.row == 1 {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! Cell2
             cell2.arrData = arrHourly
-            
             return cell2
         }
         // Cell 3: Là TableView. Đổ dữ liệu WeeklyData
@@ -225,29 +215,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         
         // Cell 4: Đổ dữ liệu Curent Data
         let cell4 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! Cell4
-        let item = currentData[0]
-
-        cell4.airQualityLabel.text = "\(item.aqi ?? 0)"
-        cell4.sunRiseLabel.text = item.sunrise ?? "00:00"
-        cell4.sunSetLabel.text = item.sunset ?? "00:00"
-        cell4.uvLabel.text = "\(item.uv ?? 0)"
-        cell4.precipLabel.text = "\(Int(item.precip ?? 0)) mm"
-        
-        
+        if currentData.count > 0 {
+            cell4.bindData(item: currentData[0])
+        }
         return cell4
-        
     }
-    
-    
     
 }
-
+    // MARK: -Extension
 extension HomeVC {
-    func round1(a:Double)->Double {                          // func lấy bao nhiêu số sau dấu , của Float
-        let mu = pow(10.0,1.0)                // chỉnh số 2.0 thành 3.0, 4.0….
-        let r=round(a*mu)/mu
-        return r
-    }
     
     func stringFromAny(_ value:Any?) -> String {
         

@@ -111,6 +111,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="cityLabel" destination="kfk-nz-GzK" id="HYh-Ec-cY6"/>
                 <outlet property="iconImage" destination="tRJ-ah-7eA" id="5my-kS-R8c"/>

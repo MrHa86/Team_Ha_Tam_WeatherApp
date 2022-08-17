@@ -20,10 +20,12 @@ class CityTableCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
+    func bindData(item: Data) {
+        cityLabel.text = item.cityName
+        tempLabel.text = "\(item.temp ?? 0)°"
+        iconImage.image = .init(named: item.weather!.icon!+"2")
+        let a = item.weather!.icon!.suffix(1)
+        wallPaperImage.image = .init(named: a == "d" ? "Day2" : "Night2")
     }
     
 }

@@ -17,12 +17,12 @@ class Cell2: UICollectionViewCell {
         }
     }
     
+    var handleDidSelectItem: ((_ : Int ) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         configCollectionView2()
-        
-        
     }
     
     func configCollectionView2() {
@@ -42,30 +42,18 @@ extension Cell2: UICollectionViewDelegate, UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let minicell = collectionViewHorizon.dequeueReusableCell(withReuseIdentifier: "minicell", for: indexPath) as! MiniCell
-        let item = arrData[indexPath.row]
-        minicell.hourLabel.text = localTimeToHour(time: item.timestampLocal!)
-        minicell.iconImage.image = .init(named: item.weather!.icon!)
-        minicell.tempLabel.text = "\(Int(item.temp ?? 0))°"
-        minicell.humidityLabel.text = "\(item.rh ?? 0)%"
+        minicell.bindData(item: arrData[indexPath.row])
         return minicell
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        
         return CGSize(width: collectionView.bounds.width/5, height: collectionView.bounds.height)
     }
+ 
 }
 
 
-extension Cell2 {
-    func localTimeToHour(time: String) -> String {
-        let a = time.suffix(8)
-        let b = a.prefix(2)
-        return String(b)
-    }
-    
-}
+
 
 

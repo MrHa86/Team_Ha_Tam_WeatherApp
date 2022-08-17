@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -62,7 +61,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="T10-6I-kLL" firstAttribute="leading" secondItem="PZ0-J5-lXd" secondAttribute="trailing" constant="16" id="34T-JI-Z5n"/>
                                             <constraint firstItem="T10-6I-kLL" firstAttribute="bottom" secondItem="PZ0-J5-lXd" secondAttribute="bottom" id="4O4-Xj-gfV"/>
@@ -113,7 +112,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="RMT-nA-AcJ" secondAttribute="trailing" constant="16" id="BUt-g3-0xH"/>
                                                             <constraint firstItem="fDv-8h-NlE" firstAttribute="top" secondItem="ogu-lq-pbq" secondAttribute="top" constant="4" id="Hq5-Uw-h0c"/>
@@ -145,13 +144,14 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="ieU-a4-q4W" firstAttribute="leading" secondItem="UjQ-1Z-22B" secondAttribute="leading" constant="16" id="Qnx-BX-MMo"/>
                                                             <constraint firstItem="FYk-Jg-EEJ" firstAttribute="leading" secondItem="UjQ-1Z-22B" secondAttribute="leading" constant="16" id="Teb-Os-pCe"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="FYk-Jg-EEJ" firstAttribute="height" secondItem="RMT-nA-AcJ" secondAttribute="height" id="JaL-P8-yPp"/>
                                                     <constraint firstItem="ieU-a4-q4W" firstAttribute="bottom" secondItem="fDv-8h-NlE" secondAttribute="bottom" id="MJp-uo-tD9"/>
@@ -164,7 +164,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="qgD-4k-jrD" firstAttribute="top" secondItem="a5P-wq-011" secondAttribute="top" constant="1" id="8Xi-NT-efM"/>
                                             <constraint firstItem="A4H-Va-Bd3" firstAttribute="leading" secondItem="a5P-wq-011" secondAttribute="leading" constant="16" id="CPK-Xg-sa3"/>
@@ -211,7 +211,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="FLD-RX-UEb" secondAttribute="bottom" constant="4" id="nRl-ie-kZy"/>
                                                             <constraint firstItem="A4m-Wr-VeE" firstAttribute="top" secondItem="tKV-FT-yx2" secondAttribute="top" constant="4" id="r0r-Dd-j8d"/>
@@ -240,13 +240,14 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="SqP-4H-2uE" firstAttribute="leading" secondItem="dPn-xb-WYP" secondAttribute="leading" constant="16" id="Ivg-RZ-DPe"/>
                                                             <constraint firstAttribute="bottom" secondItem="idu-sG-Jzr" secondAttribute="bottom" constant="4" id="n0H-jf-vZg"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="SqP-4H-2uE" firstAttribute="width" secondItem="A4m-Wr-VeE" secondAttribute="width" id="ehB-ZO-PW7"/>
                                                     <constraint firstItem="SqP-4H-2uE" firstAttribute="height" secondItem="A4m-Wr-VeE" secondAttribute="height" id="iJl-gL-s2X"/>
@@ -255,7 +256,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Ldl-dF-geO" firstAttribute="leading" secondItem="HpT-NX-twp" secondAttribute="leading" id="8uA-VS-hEw"/>
                                             <constraint firstAttribute="bottom" secondItem="Ldl-dF-geO" secondAttribute="bottom" constant="1" id="HPd-DU-g6W"/>
@@ -267,6 +268,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="idu-sG-Jzr" firstAttribute="leading" secondItem="FYk-Jg-EEJ" secondAttribute="leading" id="2x1-qC-h0K"/>
                                     <constraint firstItem="idu-sG-Jzr" firstAttribute="height" secondItem="FYk-Jg-EEJ" secondAttribute="height" id="4DB-oF-6Fj"/>
@@ -283,7 +285,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bfk-9u-X1U" firstAttribute="top" secondItem="4PH-JW-Fzu" secondAttribute="top" id="PUe-vb-4G3"/>
                             <constraint firstAttribute="trailing" secondItem="bfk-9u-X1U" secondAttribute="trailing" id="Wqc-jh-IDa"/>
@@ -294,6 +296,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="4PH-JW-Fzu" secondAttribute="bottom" id="8jp-3z-D0I"/>
                 <constraint firstItem="4PH-JW-Fzu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GBb-4c-cXu"/>
@@ -302,18 +305,18 @@
             </constraints>
             <size key="customSize" width="406" height="300"/>
             <connections>
+                <outlet property="airQuality1Label" destination="PZ0-J5-lXd" id="uQQ-i3-V8s"/>
                 <outlet property="airQualityLabel" destination="T10-6I-kLL" id="Huk-pN-ZxM"/>
+                <outlet property="precip1Label" destination="SqP-4H-2uE" id="kMJ-w6-4i3"/>
                 <outlet property="precipLabel" destination="idu-sG-Jzr" id="zou-Fn-MmG"/>
+                <outlet property="sunRise1Label" destination="fDv-8h-NlE" id="umA-Q0-w4E"/>
                 <outlet property="sunRiseLabel" destination="RMT-nA-AcJ" id="PVb-In-HQd"/>
+                <outlet property="sunSet1Label" destination="ieU-a4-q4W" id="ehr-5u-Omc"/>
                 <outlet property="sunSetLabel" destination="FYk-Jg-EEJ" id="4Qk-Wo-O5q"/>
+                <outlet property="uv1Label" destination="A4m-Wr-VeE" id="rfm-Qn-2sk"/>
                 <outlet property="uvLabel" destination="FLD-RX-UEb" id="Gtd-SL-IrO"/>
             </connections>
-            <point key="canvasLocation" x="-493" y="-114"/>
+            <point key="canvasLocation" x="-204" y="-130"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

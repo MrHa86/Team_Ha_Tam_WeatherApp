@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,29 +21,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-0p-KGk">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallPaper2" translatesAutoresizingMaskIntoConstraints="NO" id="W2u-6H-tWs">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mt-04-oW8">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                            <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a city" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jx3-gc-04Z">
-                                    <rect key="frame" x="32" y="21.5" width="265" height="42.5"/>
+                                    <rect key="frame" x="32" y="22.5" width="260.5" height="44.5"/>
                                     <color key="backgroundColor" red="0.75058591370000005" green="0.38361996409999999" blue="0.1489250064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYh-Pb-vck">
-                                    <rect key="frame" x="297" y="0.0" width="85" height="85"/>
+                                    <rect key="frame" x="292.5" y="0.0" width="89.5" height="89.5"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="0Q0-RU-oFY">
-                                            <rect key="frame" x="21" y="21.5" width="42.5" height="42.5"/>
+                                            <rect key="frame" x="22.5" y="22.5" width="44.5" height="44.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="0Q0-RU-oFY" secondAttribute="height" multiplier="1:1" id="Nvy-Bp-mM7"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkJ-OU-jhB">
-                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="89.5" height="89.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal">
@@ -81,17 +83,21 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qmq-MN-ULq">
-                            <rect key="frame" x="0.0" y="85" width="414" height="767"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="0.0" y="133.5" width="414" height="762.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="3mt-04-oW8" firstAttribute="top" secondItem="Ozf-0p-KGk" secondAttribute="top" id="JfS-sr-2ab"/>
+                        <constraint firstItem="3mt-04-oW8" firstAttribute="top" secondItem="Ozf-0p-KGk" secondAttribute="top" constant="44" id="JfS-sr-2ab"/>
                         <constraint firstItem="Qmq-MN-ULq" firstAttribute="top" secondItem="3mt-04-oW8" secondAttribute="bottom" id="M2V-9h-h2k"/>
+                        <constraint firstAttribute="bottom" secondItem="W2u-6H-tWs" secondAttribute="bottom" id="Q3K-4t-JcX"/>
+                        <constraint firstItem="W2u-6H-tWs" firstAttribute="top" secondItem="Ozf-0p-KGk" secondAttribute="top" id="aha-k2-0WT"/>
                         <constraint firstAttribute="trailing" secondItem="3mt-04-oW8" secondAttribute="trailing" id="bDl-6G-Dlg"/>
                         <constraint firstAttribute="trailing" secondItem="Qmq-MN-ULq" secondAttribute="trailing" id="cgP-Cx-lfc"/>
+                        <constraint firstItem="W2u-6H-tWs" firstAttribute="leading" secondItem="Ozf-0p-KGk" secondAttribute="leading" id="fgI-kw-dNh"/>
                         <constraint firstItem="Qmq-MN-ULq" firstAttribute="leading" secondItem="Ozf-0p-KGk" secondAttribute="leading" id="iVm-sC-vNv"/>
+                        <constraint firstAttribute="trailing" secondItem="W2u-6H-tWs" secondAttribute="trailing" id="jUp-96-MXO"/>
                         <constraint firstItem="3mt-04-oW8" firstAttribute="height" secondItem="Ozf-0p-KGk" secondAttribute="height" multiplier="0.1" id="m5I-Ys-o2u"/>
                         <constraint firstAttribute="bottom" secondItem="Qmq-MN-ULq" secondAttribute="bottom" id="tCT-E3-C6t"/>
                         <constraint firstItem="3mt-04-oW8" firstAttribute="leading" secondItem="Ozf-0p-KGk" secondAttribute="leading" id="zkJ-Wg-FrC"/>
@@ -104,15 +110,13 @@
                 <constraint firstItem="Ozf-0p-KGk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2WS-nu-dir"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ozf-0p-KGk" secondAttribute="trailing" id="D9P-GT-nci"/>
                 <constraint firstAttribute="bottom" secondItem="Ozf-0p-KGk" secondAttribute="bottom" id="QMR-Un-9yw"/>
-                <constraint firstItem="Ozf-0p-KGk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fdT-6F-rkr"/>
+                <constraint firstItem="Ozf-0p-KGk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fdT-6F-rkr"/>
             </constraints>
             <point key="canvasLocation" x="-629" y="219"/>
         </view>
     </objects>
     <resources>
-        <image name="search" width="20" height="20"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="search" width="600" height="598"/>
+        <image name="wallPaper2" width="640" height="759"/>
     </resources>
 </document>

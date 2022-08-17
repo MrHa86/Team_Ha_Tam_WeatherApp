@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OBd-js-lhZ" firstAttribute="top" secondItem="6b8-xp-cQB" secondAttribute="top" id="2yT-Ks-an6"/>
                             <constraint firstAttribute="trailing" secondItem="OBd-js-lhZ" secondAttribute="trailing" id="Zcl-rm-gVY"/>
@@ -36,6 +36,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6b8-xp-cQB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LZq-6l-Nqd"/>
                 <constraint firstAttribute="trailing" secondItem="6b8-xp-cQB" secondAttribute="trailing" id="TgW-4t-Lm4"/>

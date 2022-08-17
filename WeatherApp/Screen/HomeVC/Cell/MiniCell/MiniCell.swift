@@ -18,8 +18,23 @@ class MiniCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        setBorderColorToGradient(image: .init(named: "Day")!)
+       
     }
+
+    func bindData(item: DataHourly) {
+        hourLabel.text = localTimeToHour(time: item.timestampLocal!)
+        iconImage.image = .init(named: item.weather!.icon!)
+        tempLabel.text = "\(Int(item.temp ?? 0))°"
+        humidityLabel.text = "\(item.rh ?? 0)%"
+        
+        // set gradient border và color theo Day Night
+        setBorderColorToGradient(image: .init(named: DataManager.shared.checkIsDay ? "Day2" : "Night2")!)
+        tempLabel.textColor = .init(named: DataManager.shared.checkIsDay ? "Color1" : "Color2")
+        hourLabel.textColor = .init(named: DataManager.shared.checkIsDay ? "Color1" : "Color2")
+    }
+}
+
+extension MiniCell {
     func setBorderColorToGradient(image: UIImage) {
         UIGraphicsBeginImageContext(frame.size)
         image.draw(in: bounds)
@@ -27,5 +42,11 @@ class MiniCell: UICollectionViewCell {
         UIGraphicsEndImageContext()
 
         self.borderView.borderColor = UIColor(patternImage: myGradient!)
+    }
+    
+    func localTimeToHour(time: String) -> String {
+        let a = time.suffix(8)
+        let b = a.prefix(2)
+        return String(b)
     }
 }
