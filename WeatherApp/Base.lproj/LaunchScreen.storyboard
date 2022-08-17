@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Medium.otf">
+            <string>iCielGotham-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -20,16 +25,17 @@
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-Nz-CLb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winter" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-HX-jTU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbD-9k-sOw">
+                                        <rect key="frame" x="73" y="428" width="268.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="iCielGotham-Medium" family="iCiel Gotham" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32309290769999999" green="0.5448020697" blue="0.72551327939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="IMW-HX-jTU" secondAttribute="trailing" id="9JC-gC-uL4"/>
-                                    <constraint firstItem="IMW-HX-jTU" firstAttribute="leading" secondItem="OuB-Nz-CLb" secondAttribute="leading" id="Lec-Qk-Q8S"/>
-                                    <constraint firstAttribute="bottom" secondItem="IMW-HX-jTU" secondAttribute="bottom" id="cnL-8z-dOc"/>
-                                    <constraint firstItem="IMW-HX-jTU" firstAttribute="top" secondItem="OuB-Nz-CLb" secondAttribute="top" id="eBd-aQ-dJ1"/>
+                                    <constraint firstItem="vbD-9k-sOw" firstAttribute="centerX" secondItem="OuB-Nz-CLb" secondAttribute="centerX" id="AfA-TM-dax"/>
+                                    <constraint firstItem="vbD-9k-sOw" firstAttribute="centerY" secondItem="OuB-Nz-CLb" secondAttribute="centerY" id="c00-8t-lhu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -49,7 +55,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="winter" width="3000" height="2000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
